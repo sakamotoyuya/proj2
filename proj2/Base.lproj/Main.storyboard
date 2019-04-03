@@ -1,23 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5vd-rb-Shb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="yem-JV-NlL">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="5vd-rb-Shb" customClass="ViewController" customModule="proj2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s0b-uh-wBE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IFl-xw-zMW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ie2-Rg-TLA">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                                        <state key="normal" title="arc.aをnilにする"/>
+                                        <connections>
+                                            <action selector="kaihou1:" destination="5vd-rb-Shb" eventType="touchUpInside" id="JBP-X2-ZRt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQx-Ea-xd4">
+                                        <rect key="frame" x="0.0" y="129.5" width="375" height="129.5"/>
+                                        <state key="normal" title="arc.bをnilにする"/>
+                                        <connections>
+                                            <action selector="kaihou2:" destination="5vd-rb-Shb" eventType="touchUpInside" id="hMg-Yf-7HJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCE-P4-DsP">
+                                        <rect key="frame" x="0.0" y="259" width="375" height="129"/>
+                                        <state key="normal" title="arcをnilにする"/>
+                                        <connections>
+                                            <action selector="kaihou3:" destination="5vd-rb-Shb" eventType="touchUpInside" id="Vpd-dy-jit"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hq9-s2-KTN">
+                                        <rect key="frame" x="0.0" y="388" width="375" height="129.5"/>
+                                        <state key="normal" title="arcを再生成"/>
+                                        <connections>
+                                            <action selector="arcseisei:" destination="5vd-rb-Shb" eventType="touchUpInside" id="04s-vZ-QR4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrr-B1-ZHA">
+                                        <rect key="frame" x="0.0" y="517.5" width="375" height="129.5"/>
+                                        <state key="normal" title="全データ確認"/>
+                                        <connections>
+                                            <action selector="confirm:" destination="5vd-rb-Shb" eventType="touchUpInside" id="Q1X-EM-2gc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="m85-Lt-QNG" firstAttribute="trailing" secondItem="IFl-xw-zMW" secondAttribute="trailing" id="8mP-yt-42g"/>
+                            <constraint firstItem="IFl-xw-zMW" firstAttribute="leading" secondItem="m85-Lt-QNG" secondAttribute="leading" id="Kst-wY-CvV"/>
+                            <constraint firstItem="IFl-xw-zMW" firstAttribute="top" secondItem="m85-Lt-QNG" secondAttribute="top" id="ras-x7-9mR"/>
+                            <constraint firstItem="m85-Lt-QNG" firstAttribute="bottom" secondItem="IFl-xw-zMW" secondAttribute="bottom" id="vr2-AI-gW8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="m85-Lt-QNG"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xWi-Uv-W0X" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
